@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlanner.ConsoleApp", "MealPlanner.ConsoleApp\MealPlanner.ConsoleApp.csproj", "{755EF98C-93B0-4EE3-9BF1-CB59430323FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlanner.Tests", "MealPlanner.Tests\MealPlanner.Tests.csproj", "{F82A2A99-D1B0-4470-A28F-A43D50FBB9CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlanner.Export", "MealPlanner.Export\MealPlanner.Export.csproj", "{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{755EF98C-93B0-4EE3-9BF1-CB59430323FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755EF98C-93B0-4EE3-9BF1-CB59430323FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755EF98C-93B0-4EE3-9BF1-CB59430323FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755EF98C-93B0-4EE3-9BF1-CB59430323FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82A2A99-D1B0-4470-A28F-A43D50FBB9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82A2A99-D1B0-4470-A28F-A43D50FBB9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82A2A99-D1B0-4470-A28F-A43D50FBB9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82A2A99-D1B0-4470-A28F-A43D50FBB9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
