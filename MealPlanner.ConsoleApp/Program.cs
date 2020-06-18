@@ -9,7 +9,8 @@ namespace MealPlanner.ConsoleApp
         {
             Console.WriteLine("Hello World!");
 
-            Class1.Test1();
+            //Class1.Test1();
+            EvernoteExporter.CreateAndSaveNote(DateTime.Now, "Example Note", new string[] { "bananas", "apples", "charcoal" });
         }
     }
 }
