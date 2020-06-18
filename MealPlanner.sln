@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlanner.Tests", "MealPl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlanner.Export", "MealPlanner.Export\MealPlanner.Export.csproj", "{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlanner.Web", "MealPlanner.Web\MealPlanner.Web.csproj", "{B7B59686-F3EE-4354-89A5-27D1D6166C97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4294AED-8CC5-4471-8B52-AE2CC789D2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B59686-F3EE-4354-89A5-27D1D6166C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B59686-F3EE-4354-89A5-27D1D6166C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B59686-F3EE-4354-89A5-27D1D6166C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B59686-F3EE-4354-89A5-27D1D6166C97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
