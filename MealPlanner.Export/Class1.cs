@@ -19,25 +19,45 @@ namespace MealPlanner.Export
 
             doc.InsertAfter(xmlDoctype, xmlDeclaration);
 
-            //(2) string.Empty makes cleaner code
-            XmlElement element1 = doc.CreateElement(string.Empty, "body", string.Empty);
-            doc.AppendChild(element1);
+            XmlElement enExportNode = doc.CreateElement("en-export");
+            enExportNode.SetAttribute("export-date", DateTime.Now.ToString());
+            enExportNode.SetAttribute("application", "Evernote/MealPlanner");
+            enExportNode.SetAttribute("version", "6.x");
 
-            XmlElement element2 = doc.CreateElement(string.Empty, "level1", string.Empty);
-            element1.AppendChild(element2);
 
-            XmlElement element3 = doc.CreateElement(string.Empty, "level2", string.Empty);
-            XmlText text1 = doc.CreateTextNode("text");
-            element3.AppendChild(text1);
-            element2.AppendChild(element3);
 
-            XmlElement element4 = doc.CreateElement(string.Empty, "level2", string.Empty);
-            XmlText text2 = doc.CreateTextNode("other text");
-            element4.AppendChild(text2);
-            element2.AppendChild(element4);
+            doc.AppendChild(enExportNode);
+
+            XmlElement noteNode = doc.CreateElement("note");
+            enExportNode.AppendChild(noteNode);
+
+
+            XmlElement titleNode = doc.CreateElement("title");
+            titleNode.InnerText = "This is the note title";
+            noteNode.AppendChild(titleNode);
+
+            //content
+            XmlElement contentNode = doc.CreateElement("content");
+            noteNode.AppendChild(contentNode);
+
+            XmlCDataSection cdata = doc.CreateCDataSection("this is the actual content of the note");
+            contentNode.AppendChild(cdata);
+            
+            XmlElement createdNode = doc.CreateElement("created");
+            createdNode.InnerText = DateTime.Now.ToString();
+            noteNode.AppendChild(createdNode);
+            
+            XmlElement updatedNode = doc.CreateElement("updated");
+            updatedNode.InnerText = DateTime.Now.ToString();
+            noteNode.AppendChild(updatedNode);
 
             doc.Save("testdoc.xml");
 
+        }
+
+        private static string GenerateNoteContent(string[] checklistItems)
+        {
+            throw new NotImplementedException();
         }
     }
 }
