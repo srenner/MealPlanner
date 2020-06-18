@@ -49,6 +49,8 @@ namespace MealPlanner.Export
 
         public static void CreateAndSaveNote(DateTime datetime, string title, string[] checklist)
         {
+            string formattedDate = datetime.ToString("yyyyMMddTHHmmssZ");
+
             XmlDocument doc = new XmlDocument();
 
             XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
@@ -60,7 +62,7 @@ namespace MealPlanner.Export
             doc.InsertAfter(xmlDoctype, xmlDeclaration);
 
             XmlElement enExportNode = doc.CreateElement("en-export");
-            enExportNode.SetAttribute("export-date", datetime.ToString());
+            enExportNode.SetAttribute("export-date", formattedDate);
             enExportNode.SetAttribute("application", "Evernote/MealPlanner");
             enExportNode.SetAttribute("version", "6.x");
 
@@ -77,17 +79,16 @@ namespace MealPlanner.Export
             noteNode.AppendChild(contentNode);
 
             string innerNoteContents = CreateInnerNoteContents(checklist);
-            //string innerNoteContents = "hello";
 
             XmlCDataSection cdata = doc.CreateCDataSection(innerNoteContents);
             contentNode.AppendChild(cdata);
 
             XmlElement createdNode = doc.CreateElement("created");
-            createdNode.InnerText = datetime.ToString();
+            createdNode.InnerText = formattedDate;
             noteNode.AppendChild(createdNode);
 
             XmlElement updatedNode = doc.CreateElement("updated");
-            updatedNode.InnerText = datetime.ToString();
+            updatedNode.InnerText = formattedDate;
             noteNode.AppendChild(updatedNode);
 
             doc.Save("testdoc.xml");
