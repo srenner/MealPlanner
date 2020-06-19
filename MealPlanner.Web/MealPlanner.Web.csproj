@@ -14,5 +14,9 @@
     <ProjectReference Include="..\MealPlanner.Export\MealPlanner.Export.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\export-test.html" />
+  </ItemGroup>
+
 
 </Project>
